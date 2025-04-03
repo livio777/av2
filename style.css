@@ -1,0 +1,64 @@
+body{
+    color: rgb(235,234,234);
+    background-image: linear-gradient(to bottom, rgb(0, 0, 0), rgb(0,0,0));
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+img{
+    width: 250px;
+    height: 280px;
+    border-radius: 50%;
+    border: 5px solid rgb(255, 255, 255);
+}
+h1#Principal{
+    color: rgb(255, 255, 255);
+}
+
+#Principal:hover {
+    color: rgb(0, 0, 0);
+    } 
+/*
+Em HTML é id = # em CSS (ou cerquilha)
+Em HTML é class = . em CSS
+*/
+.destaque{
+    background-color: rgb(148, 7, 7);
+}
+button{
+    cursor: pointer;
+    border-radius: 20px;
+    border: none;
+    position: relative;
+    background-color: rgba(255,255,255,0.007);
+    color: rgb(255,255,255);
+    font-family: Arial, Helvetica, sans-serif;
+}
+button::before,button::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+@keyframes pulsar{
+    0%{
+        transform: scale(1);
+        background-color: rgb(57,57,241);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+button:hover::before{
+    animation: pulsar 2s ease-in-out  infinite ;
+    background-color: rgb(57,57,241);
+}
+button:hover::after{
+    animation: pulsar 2s ease-in-out 1s infinite;
+    background-color: rgb(57,57,241);
+}
+.CH {
+    color: rgb(250, 250, 250);
+}
